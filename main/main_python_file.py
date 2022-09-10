@@ -1,13 +1,12 @@
 import sys
 import imports
 
-choice = sys.argv()
-if 'py' in choice:
+chce = sys.argv
+if '-py' in chce:
     print('choice equals pythagoras')
-    print(str(sys.argv()))
-    #imports.pythagoras()
+    imports.pythagoras.main(chce[2], chce[3])
 else:
     print('usage: python main_python_file.py {choice} {args}')
-print('this is the main python file!')
+
 
 __name__ == '__main__'
