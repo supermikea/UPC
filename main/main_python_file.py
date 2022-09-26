@@ -42,6 +42,8 @@ if '-py' in chce: # TODO check how lonk chce is and limit number of chce[4] or 3
 if '-abc' in chce:
     print('choice equals abc formule')
     imports.abc_dingie.main(chce[2], chce[3], chce[4])
+if 'help' in chce:
+    print("help menu is not done ):")
 else:
     print('usage: python main_python_file.py {choice} {args}')
 
