@@ -19,11 +19,11 @@ def check(s1,s2,s3, checs):
         else:
             result.append("False")
         if i in s2:
-                result.append("True")
+            result.append("True")
         else:
             result.append("False")
         if i in s3:
-                result.append("True")
+            result.append("True")
         else:
             result.append("False")
 
@@ -32,9 +32,17 @@ def check(s1,s2,s3, checs):
  
 # Driver Code
 checs = ["cm","mm","km","m"]
-s1 = chce[2]  
-s2 = chce[3]
-s3 = chce[4]
+
+"""
+TODO try to increase chce length liek chce[1+1...] if error stop making variables
+this is to not have any error at lien 47 - 56
+
+"""
+
+def chce_limit(): # TODO TRY TO DECREASE CHCE LIKE GOING FROM
+    while len
+    
+
 
 if '-py' in chce: # TODO check how lonk chce is and limit number of chce[4] or 3 to eliminate error if chce[4] isn't there
     print('choice equals pythagoras')
