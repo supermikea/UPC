@@ -2,58 +2,33 @@ import sys
 import imports
 
 chce = sys.argv
-mtrs = False
-
-# Python implementation to check string
-# for specific characters
- 
-# function to check 3 strings
-def check(s1,s2,s3, checs):
-    result = []
-    for i in checs:
-       
-        # for every character in char array
-        # if it is present in string return true else false
-        if i in s1:
-            result.append("True")
-        else:
-            result.append("False")
-        if i in s2:
-            result.append("True")
-        else:
-            result.append("False")
-        if i in s3:
-            result.append("True")
-        else:
-            result.append("False")
-
-    mtrs = True
- 
- 
-# Driver Code
-checs = ["cm","mm","km","m"]
-
-"""
-TODO try to increase chce length liek chce[1+1...] if error stop making variables
-this is to not have any error at lien 47 - 56
-
-"""
-
-def chce_limit(): # TODO TRY TO DECREASE CHCE LIKE GOING FROM
-    while len
-    
 
 
-if '-py' in chce: # TODO check how lonk chce is and limit number of chce[4] or 3 to eliminate error if chce[4] isn't there
-    print('choice equals pythagoras')
-    imports.pythagoras.main(chce[2], chce[3])
-if '-abc' in chce:
-    print('choice equals abc formule')
-    imports.abc_dingie.main(chce[2], chce[3], chce[4])
-if 'help' in chce:
-    print("help menu is not done ):")
+
+if '-py' in chce:
+	print('choice equals pythagoras')
+	try:
+		imports.pythagoras.main(chce[2], chce[3])
+	except IndexError:
+		raise SystemExit(f'Pythagoras requires 2 args')
+
+elif '-abcD'  in chce:
+	print('choice equals abc formule -> solve D')
+	try:
+		imports.abc_formula.main(chce[2], chce[3], chce[4])
+	except IndexError:
+		raise SystemExit(f'abc formula requires 3 args')
+
+elif '-abcR' in chce:
+	print('choice equals abc formule -> solve by factoring')
+	try:
+		import.solve_refactoring.main()
+
+elif 'help' in chce:
+	imports.help.main()
 else:
-    print('usage: python main_python_file.py {choice} {args}')
+	print('usage: python main_python_file.py {choice} {args}')
+	print("For more information type \"help\"")
 
 
 __name__ == '__main__'
